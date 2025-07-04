@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة تحكم المطوّر - حمودي سان</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fafafa;
+      color: #222;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #d32f2f;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    th {
+      background-color: #f44336;
+      color: white;
+    }
+    .flag {
+      width: 40px;
+    }
+    .contact {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>👨‍💻 لوحة تحكم حمودي سان</h1>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Sudan.svg" class="flag" alt="علم السودان">
+  <p>مرحبًا بك مطوّرنا العزيز، هذه إحصائيات البوت</p>
+
+  <table>
+    <tr><th>#</th><th>المستخدم</th><th>النقاط</th><th>المستوى</th></tr>
+    <tr><td>1</td><td>محمد</td><td>280</td><td>3</td></tr>
+    <tr><td>2</td><td>سارة</td><td>220</td><td>2</td></tr>
+    <tr><td>3</td><td>علي</td><td>180</td><td>2</td></tr>
+  </table>
+
+  <div class="contact">
+    <h3>📱 معلومات المطوّر</h3>
+    <p><strong>الاسم:</strong> حمودي سان</p>
+    <p><strong>رقم الهاتف:</strong> 0900042500</p>
+    <p><strong>فيسبوك:</strong> <a href="https://www.facebook.com/babasnfor80" target="_blank">اضغط هنا</a></p>
+  </div>
+</body>
+</html>
