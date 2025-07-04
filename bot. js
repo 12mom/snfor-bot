@@ -1,0 +1,61 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const request = require('request');
+const app = express();
+
+app.use(bodyParser.json());
+
+const PAGE_ACCESS_TOKEN = 'YOUR_PAGE_ACCESS_TOKEN'; // ضع التوكن الخاص بك هنا
+
+app.get('/', (req, res) => {
+  res.send('Snfor Bot يعمل الآن 🚀');
+});
+
+app.post('/webhook', (req, res) => {
+  let body = req.body;
+
+  if (body.object === 'page') {
+    body.entry.forEach(function(entry) {
+      let webhook_event = entry.messaging[0];
+      let sender_psid = webhook_event.sender.id;
+
+      if (webhook_event.message) {
+        handleMessage(sender_psid, webhook_event.message);
+      }
+    });
+    res.status(200).send('EVENT_RECEIVED');
+  } else {
+    res.sendStatus(404);
+  }
+});
+
+function handleMessage(sender_psid, received_message) {
+  let response;
+  const msg = received_message.text?.toLowerCase();
+
+  switch (msg) {
+    case 'مرحبا':
+      response = { text: '👋 أهلاً بك في Snfor Bot! تحياتي من بابا سنفور 🌙' };
+      break;
+    case 'المطور':
+      response = {
+        attachment: {
+          type: 'template',
+          payload: {
+            template_type: 'button',
+            text: 'المطور: حمودي سان 🇸🇩',
+            buttons: [
+              {
+                type: 'web_url',
+                url: 'https://www.facebook.com/babasnfor80',
+                title: 'تواصل مع المطور'
+              }
+            ]
+          }
+        }
+      };
+      break;
+    case 'نقاط':
+      response = { text: '⭐ نقاطك الحالية: 120 نقطة' };
+      break;
+    case 'مستوا
