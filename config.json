@@ -1,8 +1,3 @@
 {
-  "bot_name": "Snfor Bot",
-  "developer": {
-    "name": "حمودي سان",
-    "country": "السودان",
-    "contact": "https://www.facebook.com/babasnfor80"
-  },
-  "language
+  "token": "YOUR_BOT_TOKEN_HERE"
+}
